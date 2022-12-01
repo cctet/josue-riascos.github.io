@@ -1,0 +1,189 @@
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 5px;
+}
+
+body{
+    font-family: cursive;
+    font-size: 1rem;
+    min-height: 100%;
+    background-color: orange;
+}
+.logo{
+    width: 105px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 0%;
+    padding: 0%;
+}
+
+.logo:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0, 195, 255, 0.342);
+}
+
+.logo2{
+    width: 100px;
+    border-radius: 20px;
+}
+
+.logo2:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0, 195, 255, 0.342);
+}
+
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.795);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+
+h1{
+    color: brown;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.uno{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+
+.uno:hover{
+    box-shadow: -1px 1px 7px 0px rgba(255, 255, 255, 0.342);
+}
+
+.dos{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+
+.dos:hover{
+    box-shadow: -1px 1px 7px 0px rgba(255, 255, 255, 0.342);
+}
+
+.tres{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+
+.tres:hover{
+    box-shadow: -1px 1px 7px 0px rgba(255, 255, 255, 0.342);
+}
+
+.cuatro{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 20px;
+    max-width: 110px;
+    padding-top: 10px;
+}
+
+.cuatro:hover{
+    box-shadow: -1px 1px 7px 0px rgba(255, 255, 255, 0.342);
+}
+
+.navbar {
+    grid-area: navbar;
+    background-size: 100px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    background-color: rgba(0, 195, 255, 0.342);
+}
+
+.imgnav{
+    width: 50px;
+    border-radius: 20px;
+}
+
+.logo3{
+    width: 400px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-image: url('Granos de café 2.jpg');
+    background-size: cover;
+    text-align: justify;
+    color: rgb(250, 215, 231);
+    text-shadow: 1px 1px rgb(128, 0, 0);
+    background-color: black;
+}
+
+.main {
+    grid-area: main;
+    background-image: url('./crema\ de\ viche.jpg');
+    background-size: cover;
+    background-position-x: left;
+    background-color: brown;
+}
+
+.imgmain{
+    width: 100px;
+    border-radius: 20px;
+}
+
+.imgmain:hover{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+}
+
+.footer {
+    grid-area: footer;
+    background-image: url('Granos de café 1.jpg');
+    background-size: 120px;
+    background-position-y: start;
+}
+
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 130px
+        "navbar  navbar" auto
+        "sidebar main"   auto 
+        "footer  footer" 100px/
+        200px    auto;
+        overflow-y: scroll;
+    }
+}
+
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header header"  130px
+        "navbar  main   sidebar" auto
+        "footer  footer footer"  100px/
+        150px    auto    200px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"       100px
+        "dos"       100px
+        "tres"      100px
+        "cuatro"    100px;
+        grid-row-gap: 20px;
+    }
+}
